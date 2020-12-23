@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { saveProduct } from "../reducks/products/operations";
 import { PrimaryButton, SelectBox, TextInput } from '../components/Ulkit';
+import ImageArea from '../components/Products/ImageArea';
 
 
 const ProductEdit = () => {
@@ -41,6 +42,7 @@ const ProductEdit = () => {
         <section>
             <h2 className="u-text__headline u-text-center">商品の登録・編集</h2>
             <div className="c-section-container">
+                <ImageArea />
                 <TextInput
                     fullWidth={true} label={"商品名"} multiline={false} required={true}
                     onChange={inputName} rows={1} value={name} type={"text"}
